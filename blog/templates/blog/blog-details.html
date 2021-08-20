@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}<title>{{ post.title }}</title>{% endblock %}
+
+{% block content %}
+{% if post %}
+  <h1>{{ post.title }}</h1>
+  <p>Created on: {{ post.date_created }}</p>
+  <p>Last update: {{ post.date_updated }}</p>
+  <p>{{ post.body }}</p>
+{% endif %}
+{% endblock %}
+
+
+
