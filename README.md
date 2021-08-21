@@ -19,7 +19,9 @@ cd django-blog
 
 ```bash
 # สร้าง virtual environment ชื่อว่า env (อยู่ใน root directory)
-python -m venv env
+python -m venv env  # (Windows)
+
+python3 -m venv env # (macOS)
 
 # Activate (เรียกใช้งาน) virtual environment
 env/Scripts/activate  # (Windows)
