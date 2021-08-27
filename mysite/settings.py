@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-=eul6fpy(-28@!^0py540)mb^#qb3o2ol1hqbs2-d+zsayk+7i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['f92b-2403-6200-8870-2adf-f14d-883e-7d5e-773e.ngrok.io', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',  # Our app
-    'django_summernote'
+    'django_summernote',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -143,3 +144,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 X_FRAME_OPTIONS = 'SAMEORIGIN'  # Summernote additional config
+
+CRISPY_TEMPLATE_PACK="bootstrap4"

@@ -2,15 +2,51 @@
 
 {% block title %}<title>Contact</title>{% endblock %}
 
-{% block content %}
-<div class="container" style="text-align: center;">
-    <h1>Hello, forms</h1>
-    <form action="/contact" method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-primary" type="submit">Submit</button>
-    </form>
-</div>
+{% block content %}  
+    <div class="container" style="align-items: center;">
+    
+        <div class="row">
+            <div class="col-lg-5">
+                <form action="{% url 'contact' %}" method="POST">
+                    {% csrf_token %}
+
+                    <!-- Header Text -->
+                    <div>
+                        <h5 style="text-align: center;">Do you want to get in touch with us ?</h5>
+                    </div>
+
+                    <!-- Subject -->
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <input type="text" class="form-control" name="subject" placeholder="Enter your course here">
+                    </div>
+
+                    <!-- Sender -->
+                    <div class="form-group">
+                        <label>Sender</label>
+                        <input type="text" class="form-control" name="sender">
+                    </div>
+
+                    <!-- Course Duration -->
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" class="form-control" name="email">
+                    </div>
+
+                    <!-- Course Description -->
+                    <div class="form-group">
+                        <label>Detail</label>
+                        <textarea class="form-control" rows="5" name="detail"></textarea>
+                    </div>
+
+                    <!-- Button for submitting form -->
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn btn-primary">Create Course</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div><br><br><br><br>
 {% endblock %}
 
 

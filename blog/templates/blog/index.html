@@ -3,15 +3,19 @@
 {% block title %}<title>Home</title>{% endblock %}
 
 {% block content %}
-{% for post in posts %}
-  <h1>{{ post.title }}</h1>
-  <img src="{{ post.featured_pic.url }}" alt="{{ post.title }}" width="300px" height="250px">
-  <p>Created on: {{ post.date_created }}</p>
-  <p>Last update: {{ post.date_updated }}</p>
-  <p>Written by: {{ post.author }}</p>
-  <a class="btn btn-primary" href="/posts/{{ post.id }}" role="button">See more</a>
-{% endfor %}
+<div class="container" style="text-align: center">
+  {% for post in posts %}
+    <h1>{{ post.title }}</h1>
+    <img src="{{ post.featured_pic.url }}" alt="{{ post.title }}" width="300px" height="250px">
+    <p>Created on: {{ post.date_created }}</p>
+    <p>Last update: {{ post.date_updated }}</p>
+    <p>Written by: {{ post.author }}</p>
+    <a class="btn btn-primary" href="/posts/{{ post.id }}" role="button">See more</a><br><br>
+  {% endfor %}<br>
+</div>
 {% endblock %}
+
+
 
 
 
